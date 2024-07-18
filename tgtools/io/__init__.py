@@ -1,6 +1,8 @@
 from .base import Importer
 from .snp_distance import SNPDistanceImporter
 from .transphylo import TransPhyloImporter
+from .isorelate import IsorelateImporter
+
 
 def get_available_importers():
     return Importer.__subclasses__()

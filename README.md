@@ -53,3 +53,20 @@ options:
   -p MIN_PROBABILITY, --min-probability MIN_PROBABILITY
                         Minimum probability for edge
 ```
+
+### Isorelate
+
+This importer parses the file output by the Isorelate tool. 
+
+```bash
+usage: tgtools import isorelate [-h] -i INPUT -o OUTPUT -d MIN_IBD
+
+options:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        input file
+  -o OUTPUT, --output OUTPUT
+                        output file
+  -d MIN_IBD, --min-ibd MIN_IBD
+                        Minimum IBD value
+```
