@@ -54,9 +54,9 @@ options:
                         Minimum probability for edge
 ```
 
-### Isorelate
+### hmmDB
 
-This importer parses the file output by the Isorelate tool. 
+This importer parses the file output by the hmmIBD tool. 
 
 ```bash
 usage: tgtools import isorelate [-h] -i INPUT -o OUTPUT -d MIN_IBD
