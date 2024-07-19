@@ -1,7 +1,7 @@
 from .base import Importer
 from .snp_distance import SNPDistanceImporter
 from .transphylo import TransPhyloImporter
-from .isorelate import IsorelateImporter
+from .hmmIBD import hmmIBDImporter
 
 
 def get_available_importers():
