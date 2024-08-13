@@ -18,13 +18,13 @@ class TransPhyloImporter(Importer):
             row = l.strip().split()
             for j in range(1, len(row)-1):
                 if float(row[j])>min_prob:
-                    edges.append({'source':header[i], 'target':header[j-1], 'properties':{'probability':row[j]}})
+                    edges.append({'source':header[i], 'target':header[j-1], 'properties':{'probability':round(float(row[j]),2)}})
 
         nodes = []
         for sample in header:
             nodes.append({"id": sample,"properties":{}})
         
-        return {"nodes":nodes, "edges":edges}
+        return {"nodes":nodes, "edges":edges,"directed":True}
                 
 
     def register_subparser(self, subparsers):
