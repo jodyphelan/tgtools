@@ -11,12 +11,14 @@ class SNPDistanceImporter(Importer):
         
     def import_data(self, infile:str, max_dist: int) -> dict:
         F = open(infile, 'r')
-        header = F.readline().strip().split()
-        nodes = [{'id':n,'properties':{}} for n in header[1:]]
+        header = F.readline().strip().split('\t')
+        nodes = [{'id':n,'properties':{}} for n in header]
         edges = []
         for i,l in tqdm(enumerate(F)):
-            row = l.strip().split()
+            row = l.strip().split('\t')
             for j in range(1, len(row)-1):
+                if j>i:
+                    continue
                 if int(row[j]) <= max_dist:
                     edges.append({
                         "source":header[i], 
