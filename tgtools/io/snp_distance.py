@@ -12,6 +12,8 @@ class SNPDistanceImporter(Importer):
     def import_data(self, infile:str, max_dist: int) -> dict:
         F = open(infile, 'r')
         header = F.readline().strip().split('\t')
+        if 'snp-dists' in header[0]:
+            header = header[1:]
         nodes = [{'id':n,'properties':{}} for n in header]
         edges = []
         for i,l in tqdm(enumerate(F)):
