@@ -10,7 +10,7 @@ license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
 dependencies = [
-    "networkx"
+    "pydantic >=2.0,<3.0"
 ]
 
 [project.scripts]
