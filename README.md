@@ -5,6 +5,13 @@ This is a command-line tool to help manipulate transjson files which are used to
 ## Installation
 
 ```bash
+conda create -n tgtools -c bioconda tgtools
+conda activate tgtools
+```
+
+or 
+
+```bash
 pip install git+https://github.com/jodyphelan/tgtools.git
 ```
 
